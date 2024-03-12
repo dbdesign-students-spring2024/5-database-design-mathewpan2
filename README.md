@@ -88,20 +88,14 @@ A table of sections along with their respective courses, because courses have mu
 
 ## Assignments 
 
-| assignment_id (pk) | section_id (fk) | due_date | Assignment Topic | 
-| :------------ | :------- | :-------- |       :--------  |
-| 1             |  1       |  9/12     |  Calculus         |
-| 2             |  2       | 9/13      |    Calculus      |
-| 3             |  3       | 9/15      |   Classic books          |
+| assignment_id (pk) | section_id (fk) | due_date | Assignment Topic | Relevant Reading |
+| :------------ | :------- | :-------- |       :--------  | :--------  |
+| 1             |  1       |  9/12     |  Calculus         | Math Textbook |
+| 2             |  2       | 9/13      |    Calculus      | Integration for dummies|
+| 3             |  3       | 9/15      |   Classic books          | shakespeare|
 
-An assignment along with its corresponding section, due date and assignment topic. Join statements can be used against this table to find out which student has which assignment or which course the assignment belongs to.
+An assignment along with its corresponding section, due date and assignment topic, and a relevant reading. Join statements can be used against this table to find out which student has which assignment or which course the assignment belongs to. This way, all fields relate directly to the pk (an assignment)
 
-
-|id (pk)| assignment_id (fk) | relevant_reading |
-| :------------ | :------------ | :------- |
-|  1            |    3          | shakespeare|
-
-A seperate table for relevant readings because the same assignment might have multiple readings. This avoids data redundancy and keeps with the fourth norm.
 
 ## Professor
 
